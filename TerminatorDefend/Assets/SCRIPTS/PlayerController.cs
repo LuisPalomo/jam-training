@@ -8,10 +8,10 @@ public class PlayerController : MonoBehaviour {
     void FixedUpdate()
     {
         //Obtengo valores numericos comprendidos entre 0 y 1 ó -1 y 0.
-        float moveY = Input.GetAxis("Vertical");
+        float moveZ = Input.GetAxis("Vertical");
         float moveX = Input.GetAxis("Horizontal");
 
-        GetComponent<Rigidbody2D>().velocity =new Vector2 (maxSpeed*moveX, maxSpeed * moveY);
+        GetComponent<Rigidbody>().velocity =new Vector3 (maxSpeed*moveX,0, maxSpeed * moveZ);
     }
 
 }
